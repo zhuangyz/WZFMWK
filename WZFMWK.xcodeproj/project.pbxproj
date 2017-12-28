@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D1650941FF3F19C00D86143 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650931FF3F19C00D86143 /* AppDelegate.m */; };
+		5D1650971FF3F19C00D86143 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650961FF3F19C00D86143 /* ViewController.m */; };
+		5D16509A1FF3F19C00D86143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1650981FF3F19C00D86143 /* Main.storyboard */; };
+		5D16509C1FF3F19C00D86143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D16509B1FF3F19C00D86143 /* Assets.xcassets */; };
+		5D16509F1FF3F19C00D86143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D16509D1FF3F19C00D86143 /* LaunchScreen.storyboard */; };
+		5D1650A21FF3F19C00D86143 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650A11FF3F19C00D86143 /* main.m */; };
+		5D1650AC1FF3F19C00D86143 /* WZFMWKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650AB1FF3F19C00D86143 /* WZFMWKTests.m */; };
+		5D1650D11FF3F23F00D86143 /* NSDate+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650BA1FF3F23F00D86143 /* NSDate+WZExtend.m */; };
+		5D1650D21FF3F23F00D86143 /* NSString+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650BC1FF3F23F00D86143 /* NSString+WZExtend.m */; };
+		5D1650D31FF3F23F00D86143 /* UIColor+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650C01FF3F23F00D86143 /* UIColor+WZExtend.m */; };
+		5D1650D41FF3F23F00D86143 /* UIDevice+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650C21FF3F23F00D86143 /* UIDevice+WZExtend.m */; };
+		5D1650D51FF3F23F00D86143 /* UIImage+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650C41FF3F23F00D86143 /* UIImage+WZExtend.m */; };
+		5D1650D61FF3F23F00D86143 /* UIView+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650C61FF3F23F00D86143 /* UIView+WZExtend.m */; };
+		5D1650D71FF3F23F00D86143 /* UIViewController+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650C81FF3F23F00D86143 /* UIViewController+WZExtend.m */; };
+		5D1650D81FF3F23F00D86143 /* WZApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650CC1FF3F23F00D86143 /* WZApplicationManager.m */; };
+		5D1650D91FF3F23F00D86143 /* WZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1650CE1FF3F23F00D86143 /* WZLocationManager.m */; };
+		9FE10E345CA16373038523A8 /* Pods_WZFMWK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1A1DBBE4A3D4DB0858D462 /* Pods_WZFMWK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D1650A81FF3F19C00D86143 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D1650871FF3F19C00D86143 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D16508E1FF3F19C00D86143;
+			remoteInfo = WZFMWK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		403ECD33001B5E279EB4E90C /* Pods-WZFMWK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZFMWK.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK.release.xcconfig"; sourceTree = "<group>"; };
+		5D16508F1FF3F19C00D86143 /* WZFMWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZFMWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1650921FF3F19C00D86143 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5D1650931FF3F19C00D86143 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D1650951FF3F19C00D86143 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5D1650961FF3F19C00D86143 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5D1650991FF3F19C00D86143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D16509B1FF3F19C00D86143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D16509E1FF3F19C00D86143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D1650A01FF3F19C00D86143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D1650A11FF3F19C00D86143 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D1650A71FF3F19C00D86143 /* WZFMWKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZFMWKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1650AB1FF3F19C00D86143 /* WZFMWKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZFMWKTests.m; sourceTree = "<group>"; };
+		5D1650AD1FF3F19C00D86143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D1650B91FF3F23F00D86143 /* NSDate+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650BA1FF3F23F00D86143 /* NSDate+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650BB1FF3F23F00D86143 /* NSString+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650BC1FF3F23F00D86143 /* NSString+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650BD1FF3F23F00D86143 /* WZCategoriesHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCategoriesHeader.h; sourceTree = "<group>"; };
+		5D1650BF1FF3F23F00D86143 /* UIColor+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650C01FF3F23F00D86143 /* UIColor+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650C11FF3F23F00D86143 /* UIDevice+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650C21FF3F23F00D86143 /* UIDevice+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650C31FF3F23F00D86143 /* UIImage+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650C41FF3F23F00D86143 /* UIImage+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650C51FF3F23F00D86143 /* UIView+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650C61FF3F23F00D86143 /* UIView+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650C71FF3F23F00D86143 /* UIViewController+WZExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZExtend.h"; sourceTree = "<group>"; };
+		5D1650C81FF3F23F00D86143 /* UIViewController+WZExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZExtend.m"; sourceTree = "<group>"; };
+		5D1650C91FF3F23F00D86143 /* WZUtilDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZUtilDefine.h; sourceTree = "<group>"; };
+		5D1650CB1FF3F23F00D86143 /* WZApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZApplicationManager.h; sourceTree = "<group>"; };
+		5D1650CC1FF3F23F00D86143 /* WZApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZApplicationManager.m; sourceTree = "<group>"; };
+		5D1650CD1FF3F23F00D86143 /* WZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLocationManager.h; sourceTree = "<group>"; };
+		5D1650CE1FF3F23F00D86143 /* WZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLocationManager.m; sourceTree = "<group>"; };
+		EC1A1DBBE4A3D4DB0858D462 /* Pods_WZFMWK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZFMWK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68FF690646FAD7E21174B6F /* Pods-WZFMWK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZFMWK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D16508C1FF3F19C00D86143 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE10E345CA16373038523A8 /* Pods_WZFMWK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1650A41FF3F19C00D86143 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46347A6B276A5143B2F47837 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F68FF690646FAD7E21174B6F /* Pods-WZFMWK.debug.xcconfig */,
+				403ECD33001B5E279EB4E90C /* Pods-WZFMWK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D1650861FF3F19C00D86143 = {
+			isa = PBXGroup;
+			children = (
+				5D1650911FF3F19C00D86143 /* WZFMWK */,
+				5D1650AA1FF3F19C00D86143 /* WZFMWKTests */,
+				5D1650901FF3F19C00D86143 /* Products */,
+				46347A6B276A5143B2F47837 /* Pods */,
+				F318BDB375DE4604BDDFA485 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D1650901FF3F19C00D86143 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D16508F1FF3F19C00D86143 /* WZFMWK.app */,
+				5D1650A71FF3F19C00D86143 /* WZFMWKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D1650911FF3F19C00D86143 /* WZFMWK */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650B61FF3F23F00D86143 /* Utils */,
+				5D1650921FF3F19C00D86143 /* AppDelegate.h */,
+				5D1650931FF3F19C00D86143 /* AppDelegate.m */,
+				5D1650951FF3F19C00D86143 /* ViewController.h */,
+				5D1650961FF3F19C00D86143 /* ViewController.m */,
+				5D1650981FF3F19C00D86143 /* Main.storyboard */,
+				5D16509B1FF3F19C00D86143 /* Assets.xcassets */,
+				5D16509D1FF3F19C00D86143 /* LaunchScreen.storyboard */,
+				5D1650A01FF3F19C00D86143 /* Info.plist */,
+				5D1650A11FF3F19C00D86143 /* main.m */,
+			);
+			path = WZFMWK;
+			sourceTree = "<group>";
+		};
+		5D1650AA1FF3F19C00D86143 /* WZFMWKTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650AB1FF3F19C00D86143 /* WZFMWKTests.m */,
+				5D1650AD1FF3F19C00D86143 /* Info.plist */,
+			);
+			path = WZFMWKTests;
+			sourceTree = "<group>";
+		};
+		5D1650B61FF3F23F00D86143 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650B71FF3F23F00D86143 /* Categories */,
+				5D1650C91FF3F23F00D86143 /* WZUtilDefine.h */,
+				5D1650CA1FF3F23F00D86143 /* Tools */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D1650B71FF3F23F00D86143 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650B81FF3F23F00D86143 /* Foundation */,
+				5D1650BD1FF3F23F00D86143 /* WZCategoriesHeader.h */,
+				5D1650BE1FF3F23F00D86143 /* UIKit */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5D1650B81FF3F23F00D86143 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650B91FF3F23F00D86143 /* NSDate+WZExtend.h */,
+				5D1650BA1FF3F23F00D86143 /* NSDate+WZExtend.m */,
+				5D1650BB1FF3F23F00D86143 /* NSString+WZExtend.h */,
+				5D1650BC1FF3F23F00D86143 /* NSString+WZExtend.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5D1650BE1FF3F23F00D86143 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650BF1FF3F23F00D86143 /* UIColor+WZExtend.h */,
+				5D1650C01FF3F23F00D86143 /* UIColor+WZExtend.m */,
+				5D1650C11FF3F23F00D86143 /* UIDevice+WZExtend.h */,
+				5D1650C21FF3F23F00D86143 /* UIDevice+WZExtend.m */,
+				5D1650C31FF3F23F00D86143 /* UIImage+WZExtend.h */,
+				5D1650C41FF3F23F00D86143 /* UIImage+WZExtend.m */,
+				5D1650C51FF3F23F00D86143 /* UIView+WZExtend.h */,
+				5D1650C61FF3F23F00D86143 /* UIView+WZExtend.m */,
+				5D1650C71FF3F23F00D86143 /* UIViewController+WZExtend.h */,
+				5D1650C81FF3F23F00D86143 /* UIViewController+WZExtend.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5D1650CA1FF3F23F00D86143 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5D1650CB1FF3F23F00D86143 /* WZApplicationManager.h */,
+				5D1650CC1FF3F23F00D86143 /* WZApplicationManager.m */,
+				5D1650CD1FF3F23F00D86143 /* WZLocationManager.h */,
+				5D1650CE1FF3F23F00D86143 /* WZLocationManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F318BDB375DE4604BDDFA485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1DBBE4A3D4DB0858D462 /* Pods_WZFMWK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D16508E1FF3F19C00D86143 /* WZFMWK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D1650B01FF3F19C00D86143 /* Build configuration list for PBXNativeTarget "WZFMWK" */;
+			buildPhases = (
+				7D0A4E694816A8D6843F7190 /* [CP] Check Pods Manifest.lock */,
+				5D16508B1FF3F19C00D86143 /* Sources */,
+				5D16508C1FF3F19C00D86143 /* Frameworks */,
+				5D16508D1FF3F19C00D86143 /* Resources */,
+				A7241F366DA5990A9335D385 /* [CP] Embed Pods Frameworks */,
+				07927E5A9D7934F65318B196 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WZFMWK;
+			productName = WZFMWK;
+			productReference = 5D16508F1FF3F19C00D86143 /* WZFMWK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D1650A61FF3F19C00D86143 /* WZFMWKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D1650B31FF3F19C00D86143 /* Build configuration list for PBXNativeTarget "WZFMWKTests" */;
+			buildPhases = (
+				5D1650A31FF3F19C00D86143 /* Sources */,
+				5D1650A41FF3F19C00D86143 /* Frameworks */,
+				5D1650A51FF3F19C00D86143 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D1650A91FF3F19C00D86143 /* PBXTargetDependency */,
+			);
+			name = WZFMWKTests;
+			productName = WZFMWKTests;
+			productReference = 5D1650A71FF3F19C00D86143 /* WZFMWKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D1650871FF3F19C00D86143 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = wz;
+				TargetAttributes = {
+					5D16508E1FF3F19C00D86143 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					5D1650A61FF3F19C00D86143 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5D16508E1FF3F19C00D86143;
+					};
+				};
+			};
+			buildConfigurationList = 5D16508A1FF3F19C00D86143 /* Build configuration list for PBXProject "WZFMWK" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D1650861FF3F19C00D86143;
+			productRefGroup = 5D1650901FF3F19C00D86143 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D16508E1FF3F19C00D86143 /* WZFMWK */,
+				5D1650A61FF3F19C00D86143 /* WZFMWKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D16508D1FF3F19C00D86143 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16509F1FF3F19C00D86143 /* LaunchScreen.storyboard in Resources */,
+				5D16509C1FF3F19C00D86143 /* Assets.xcassets in Resources */,
+				5D16509A1FF3F19C00D86143 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1650A51FF3F19C00D86143 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07927E5A9D7934F65318B196 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0A4E694816A8D6843F7190 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WZFMWK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7241F366DA5990A9335D385 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/INTULocationManager/INTULocationManager.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INTULocationManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D16508B1FF3F19C00D86143 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1650D91FF3F23F00D86143 /* WZLocationManager.m in Sources */,
+				5D1650D71FF3F23F00D86143 /* UIViewController+WZExtend.m in Sources */,
+				5D1650D11FF3F23F00D86143 /* NSDate+WZExtend.m in Sources */,
+				5D1650D61FF3F23F00D86143 /* UIView+WZExtend.m in Sources */,
+				5D1650D31FF3F23F00D86143 /* UIColor+WZExtend.m in Sources */,
+				5D1650D81FF3F23F00D86143 /* WZApplicationManager.m in Sources */,
+				5D1650971FF3F19C00D86143 /* ViewController.m in Sources */,
+				5D1650D41FF3F23F00D86143 /* UIDevice+WZExtend.m in Sources */,
+				5D1650A21FF3F19C00D86143 /* main.m in Sources */,
+				5D1650D21FF3F23F00D86143 /* NSString+WZExtend.m in Sources */,
+				5D1650941FF3F19C00D86143 /* AppDelegate.m in Sources */,
+				5D1650D51FF3F23F00D86143 /* UIImage+WZExtend.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D1650A31FF3F19C00D86143 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1650AC1FF3F19C00D86143 /* WZFMWKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D1650A91FF3F19C00D86143 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D16508E1FF3F19C00D86143 /* WZFMWK */;
+			targetProxy = 5D1650A81FF3F19C00D86143 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D1650981FF3F19C00D86143 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D1650991FF3F19C00D86143 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D16509D1FF3F19C00D86143 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D16509E1FF3F19C00D86143 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D1650AE1FF3F19C00D86143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5D1650AF1FF3F19C00D86143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D1650B11FF3F19C00D86143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68FF690646FAD7E21174B6F /* Pods-WZFMWK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 854E4B6PP3;
+				INFOPLIST_FILE = WZFMWK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyz.test.all.WZFMWK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D1650B21FF3F19C00D86143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 403ECD33001B5E279EB4E90C /* Pods-WZFMWK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 854E4B6PP3;
+				INFOPLIST_FILE = WZFMWK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyz.test.all.WZFMWK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D1650B41FF3F19C00D86143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 854E4B6PP3;
+				INFOPLIST_FILE = WZFMWKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyz.test.all.WZFMWKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZFMWK.app/WZFMWK";
+			};
+			name = Debug;
+		};
+		5D1650B51FF3F19C00D86143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 854E4B6PP3;
+				INFOPLIST_FILE = WZFMWKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyz.test.all.WZFMWKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZFMWK.app/WZFMWK";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D16508A1FF3F19C00D86143 /* Build configuration list for PBXProject "WZFMWK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1650AE1FF3F19C00D86143 /* Debug */,
+				5D1650AF1FF3F19C00D86143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D1650B01FF3F19C00D86143 /* Build configuration list for PBXNativeTarget "WZFMWK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1650B11FF3F19C00D86143 /* Debug */,
+				5D1650B21FF3F19C00D86143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D1650B31FF3F19C00D86143 /* Build configuration list for PBXNativeTarget "WZFMWKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D1650B41FF3F19C00D86143 /* Debug */,
+				5D1650B51FF3F19C00D86143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D1650871FF3F19C00D86143 /* Project object */;
+}
