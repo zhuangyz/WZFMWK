@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'WZHTTPNetworking' do |net|
     net.source_files = 'WZFMWK/WZHTTPNetworking/*.{h,m}'
-    net.public_header_files = 'WZFMWK/WZHTTPNetworking/[^WZAPILogger]*.h'
+    net.public_header_files = 'WZFMWK/WZHTTPNetworking/*.h'
     net.dependency 'AFNetworking', '~> 3.1.0'
   end
 
