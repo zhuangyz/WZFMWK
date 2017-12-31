@@ -25,6 +25,7 @@
         self.sessionManager = [AFHTTPSessionManager manager];
         self.sessionManager.requestSerializer.timeoutInterval = 60;
         self.sessionManager.requestSerializer.HTTPShouldHandleCookies = NO;
+        self.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
         self.sessionManager.securityPolicy.allowInvalidCertificates = YES;
         self.sessionManager.securityPolicy.validatesDomainName = NO;
         
@@ -131,7 +132,7 @@
             fail ? fail(wzResponse) : nil;
             
         } else {
-            WZOriginResponse *wzResponse = [[WZOriginResponse alloc] initWithRequest:request requestID:requestID responseData:responseObject status:WZOriginResponseStatusSuccess];
+            WZOriginResponse *wzResponse = [[WZOriginResponse alloc] initWithRequest:request requestID:requestID responseObject:responseObject status:WZOriginResponseStatusSuccess];
             success ? success(wzResponse) : nil;
         }
     }];

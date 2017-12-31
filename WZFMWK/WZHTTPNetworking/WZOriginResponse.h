@@ -35,7 +35,17 @@ typedef NS_ENUM(NSUInteger, WZOriginResponseStatus) {
 
 - (instancetype)initWithRequest:(NSURLRequest *)request
                       requestID:(NSInteger)requestID
-                   responseData:(NSData *)responseData
+                 responseObject:(id)responseObject // 可以为 NSData 也可以为 NSDictionary
                          status:(WZOriginResponseStatus)status;
+
+//- (instancetype)initWithRequest:(NSURLRequest *)request
+//                      requestID:(NSInteger)requestID
+//                   responseData:(NSData *)responseData
+//                         status:(WZOriginResponseStatus)status;
+//
+//- (instancetype)initWithRequest:(NSURLRequest *)request
+//                      requestID:(NSInteger)requestID
+//                   responseJSON:(NSDictionary *)responseJSON
+//                         status:(WZOriginResponseStatus)status;
 
 @end

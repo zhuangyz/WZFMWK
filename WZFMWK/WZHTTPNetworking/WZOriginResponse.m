@@ -24,6 +24,17 @@
 
 - (instancetype)initWithRequest:(NSURLRequest *)request
                       requestID:(NSInteger)requestID
+                 responseObject:(id)responseObject
+                         status:(WZOriginResponseStatus)status {
+    if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        return [self initWithRequest:request requestID:requestID responseJSON:responseObject status:status];
+    } else {
+        return [self initWithRequest:request requestID:requestID responseData:responseObject status:status];
+    }
+}
+
+- (instancetype)initWithRequest:(NSURLRequest *)request
+                      requestID:(NSInteger)requestID
                    responseData:(NSData *)responseData
                          status:(WZOriginResponseStatus)status {
     if (self = [super init]) {
@@ -33,6 +44,22 @@
         self.requestID = requestID;
         self.responseData = responseData;
         self.responseContent = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:NULL];
+        self.context = nil;
+    }
+    return self;
+}
+
+- (instancetype)initWithRequest:(NSURLRequest *)request
+                      requestID:(NSInteger)requestID
+                   responseJSON:(NSDictionary *)responseJSON
+                         status:(WZOriginResponseStatus)status {
+    if (self = [super init]) {
+        self.status = status;
+        self.request = request;
+        self.request.wz_params = request.wz_params;
+        self.requestID = requestID;
+        self.responseContent = responseJSON;
+        self.responseData = [NSJSONSerialization dataWithJSONObject:responseJSON options:NSJSONWritingPrettyPrinted error:NULL];
         self.context = nil;
     }
     return self;
