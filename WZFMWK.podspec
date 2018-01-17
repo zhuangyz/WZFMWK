@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'WZFMWK'
   s.summary      = '一些自用的、通用的、业务逻辑无关的类别/工具类。'
-  s.version      = '0.1.2'
+  s.version      = '0.1.3'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'zhuangyz' => '632647076@qq.com' }
   s.homepage     = 'https://www.baidu.com'
@@ -53,10 +53,11 @@ Pod::Spec.new do |s|
   end
   s.default_subspec = 'Core'
 
-  s.subspec 'WZEmojiRichText' do |emoji|
-    emoji.public_header_files = 'WZFMWK/WZEmojiRichText/*.h'
-    emoji.source_files = 'WZFMWK/WZEmojiRichText/*.{h,m}'
-    emoji.resources = 'WZFMWK/WZEmojiRichText/WZEmojiBundle.bundle'
-  end
+  # 弃用
+  # s.subspec 'WZEmojiRichText' do |emoji|
+  #   emoji.public_header_files = 'WZFMWK/WZEmojiRichText/*.h'
+  #   emoji.source_files = 'WZFMWK/WZEmojiRichText/*.{h,m}'
+  #   emoji.resources = 'WZFMWK/WZEmojiRichText/WZEmojiBundle.bundle'
+  # end
 
 end

@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) NSHashTable *observers;
 
+@property (nonatomic, assign) INTULocationRequestID currentRequestID;
+
 @end
 
 @implementation WZLocationManager
@@ -73,7 +75,7 @@
 }
 
 - (void)startRequestLocation {
-    [[INTULocationManager sharedInstance] subscribeToLocationUpdatesWithDesiredAccuracy:INTULocationAccuracyNeighborhood block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+    self.currentRequestID = [[INTULocationManager sharedInstance] subscribeToLocationUpdatesWithDesiredAccuracy:INTULocationAccuracyNeighborhood block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
         if (status == INTULocationStatusSuccess) {
             [self updateToLocation:currentLocation];
             
@@ -81,6 +83,10 @@
             NSLog(@"无法获取定位信息");
         }
     }];
+}
+
+- (void)stopRequestLocation {
+    [[INTULocationManager sharedInstance] cancelLocationRequest:self.currentRequestID];
 }
 
 - (void)updateToLocation:(CLLocation *)location {

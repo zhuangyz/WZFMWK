@@ -20,6 +20,7 @@
 + (instancetype)sharedInstance;
 
 - (void)startRequestLocation;
+- (void)stopRequestLocation;
 
 @property (nonatomic, readonly) float lat; // 纬度
 @property (nonatomic, readonly) float lng; // 经度

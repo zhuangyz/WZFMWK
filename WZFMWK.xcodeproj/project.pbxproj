@@ -41,6 +41,7 @@
 		5D32525B1FF4EB7B006B782E /* WZBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3252501FF4EB7A006B782E /* WZBaseAPIManager.m */; };
 		5D32525C1FF4EB7B006B782E /* WZBaseListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3252511FF4EB7A006B782E /* WZBaseListAPIManager.m */; };
 		5D32525D1FF4EB7B006B782E /* WZRequestProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3252531FF4EB7B006B782E /* WZRequestProxy.m */; };
+		5D8F6A36200DF87400CFBBC4 /* NSAttributedString+WZExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6A35200DF87400CFBBC4 /* NSAttributedString+WZExtend.m */; };
 		9FE10E345CA16373038523A8 /* Pods_WZFMWK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1A1DBBE4A3D4DB0858D462 /* Pods_WZFMWK.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,8 @@
 		5D3252541FF4EB7B006B782E /* WZNetworkingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZNetworkingDefine.h; sourceTree = "<group>"; };
 		5D3252561FF4EB7B006B782E /* WZAPILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZAPILogger.h; sourceTree = "<group>"; };
 		5D32525F1FF4EBC0006B782E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D8F6A34200DF87400CFBBC4 /* NSAttributedString+WZExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WZExtend.h"; sourceTree = "<group>"; };
+		5D8F6A35200DF87400CFBBC4 /* NSAttributedString+WZExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+WZExtend.m"; sourceTree = "<group>"; };
 		EC1A1DBBE4A3D4DB0858D462 /* Pods_WZFMWK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZFMWK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68FF690646FAD7E21174B6F /* Pods-WZFMWK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZFMWK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZFMWK/Pods-WZFMWK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +237,8 @@
 				5D1650BA1FF3F23F00D86143 /* NSDate+WZExtend.m */,
 				5D1650BB1FF3F23F00D86143 /* NSString+WZExtend.h */,
 				5D1650BC1FF3F23F00D86143 /* NSString+WZExtend.m */,
+				5D8F6A34200DF87400CFBBC4 /* NSAttributedString+WZExtend.h */,
+				5D8F6A35200DF87400CFBBC4 /* NSAttributedString+WZExtend.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				5D32523B1FF4E045006B782E /* UIViewController+WZPhotoBrowser.m in Sources */,
 				5D1650D41FF3F23F00D86143 /* UIDevice+WZExtend.m in Sources */,
 				5D32525B1FF4EB7B006B782E /* WZBaseAPIManager.m in Sources */,
+				5D8F6A36200DF87400CFBBC4 /* NSAttributedString+WZExtend.m in Sources */,
 				5D1650A21FF3F19C00D86143 /* main.m in Sources */,
 				5D1650D21FF3F23F00D86143 /* NSString+WZExtend.m in Sources */,
 				5D1650941FF3F19C00D86143 /* AppDelegate.m in Sources */,

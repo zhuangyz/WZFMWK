@@ -8,6 +8,7 @@
 
 #import "WZBaseAPIManager.h"
 
+// 由于不同项目请求接口的逻辑以及对接口请求结果的判断都不尽相同，所以这个类仅供参考，具体项目可以根据自己的业务来定制 ListAPIManager。
 @class WZBaseListAPIManager;
 @protocol WZListAPIManagerParamSource <NSObject>
 

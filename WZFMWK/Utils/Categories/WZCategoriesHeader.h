@@ -12,6 +12,7 @@
 // Foundation
 #import "NSDate+WZExtend.h"
 #import "NSString+WZExtend.h"
+#import "NSAttributedString+WZExtend.h"
 
 // UIKit
 #import "UIColor+WZExtend.h"

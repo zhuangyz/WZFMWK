@@ -12,6 +12,7 @@
  *  富文本工具类
  *  该类主要用来：将带表情文本转换为富文本、计算富文本高度
  */
+NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "这个类已经弃用！")
 @interface WZEmojiRichTextHelper : NSObject
 
 /**

@@ -14,6 +14,7 @@ static NSString const *wz_emojiPatternString = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\
 /**
  *  管理表情库的单例类
  */
+NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "这个类已经弃用！")
 @interface WZEmojiMappingManager : NSObject
 
 @property (nonatomic, readonly) NSDictionary *emojiMappings;

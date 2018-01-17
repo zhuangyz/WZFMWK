@@ -20,6 +20,7 @@ static NSString *const kIsFirstPageFlagKey = @"isFirstPage";
 @implementation WZBaseListAPIManager
 
 - (instancetype)init {
+    NSAssert(false, @"因为暂时不希望这个类被使用，所以这里强制报错！");
     if (self = [super init]) {
         self.paramSource = self;
         self.delegate = self;

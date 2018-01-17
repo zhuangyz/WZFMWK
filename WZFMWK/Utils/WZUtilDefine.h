@@ -20,4 +20,13 @@
 #define WZImageMakeWithFile(name) WZImageMakeWithFileAndSuffix(name, @"png")
 #define WZImageMakeWithFileAndSuffix(name, suffix) [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.%@", [[NSBundle mainBundle] resourcePath], name, suffix]]
 
+#define WZFormatString(...) [NSString stringWithFormat:__VA_ARGS__]
+
+#define wz_dispatch_main_async_safe(block)\
+    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {\
+        block();\
+    } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+    }
+
 #endif /* WZUtilDefine_h */
