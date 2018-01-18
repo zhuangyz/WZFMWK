@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'WZFMWK'
   s.summary      = '一些自用的、通用的、业务逻辑无关的类别/工具类。'
-  s.version      = '0.1.3'
+  s.version      = '0.1.4'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'zhuangyz' => '632647076@qq.com' }
   s.homepage     = 'https://www.baidu.com'
