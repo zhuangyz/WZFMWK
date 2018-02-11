@@ -20,8 +20,8 @@
 // MARK: - NSString(WZAttributedString)
 @interface NSString (WZAttributedString)
 
-- (NSAttributedString *)attributedString;
-- (NSMutableAttributedString *)mutableAttributedString;
+- (NSAttributedString *)wz_attributedString;
+- (NSMutableAttributedString *)wz_mutableAttributedString;
 
 @end
 
@@ -79,11 +79,11 @@ typedef NSAttributedString *(^WZAttributedAppendBlock)(NSAttributedString *attrS
 // MARK: NSAttributedString(WZAttributeChain)
 @interface NSAttributedString (WZAttributeChain)
 
-@property (nonatomic, readonly) WZAttributeRangeBlock range;
+@property (nonatomic, readonly) WZAttributeRangeBlock wz_range;
 
-@property (nonatomic, readonly) WZAttributesBlock attributes;
+@property (nonatomic, readonly) WZAttributesBlock wz_attributes;
 
-@property (nonatomic, readonly) WZAttributedAppendBlock append;
+@property (nonatomic, readonly) WZAttributedAppendBlock wz_append;
 
 @end
 
@@ -103,10 +103,10 @@ typedef NSMutableAttributedString *(^WZMutableAttributedAppendBlock)(NSAttribute
 // MARK: NSMutableAttributedString(WZAttributeChain)
 @interface NSMutableAttributedString (WZAttributeChain)
 
-@property (nonatomic, readonly) WZMutableAttributeRangeBlock range;
+@property (nonatomic, readonly) WZMutableAttributeRangeBlock wz_range;
 
-@property (nonatomic, readonly) WZMutableAttributesBlock attributes;
+@property (nonatomic, readonly) WZMutableAttributesBlock wz_attributes;
 
-@property (nonatomic, readonly) WZMutableAttributedAppendBlock append;
+@property (nonatomic, readonly) WZMutableAttributedAppendBlock wz_append;
 
 @end

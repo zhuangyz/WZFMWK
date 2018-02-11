@@ -42,11 +42,11 @@
 // MARK: - NSString(WZAttributedString)
 @implementation NSString (WZAttributedString)
 
-- (NSAttributedString *)attributedString {
+- (NSAttributedString *)wz_attributedString {
     return [[NSAttributedString alloc] initWithString:self];
 }
 
-- (NSMutableAttributedString *)mutableAttributedString {
+- (NSMutableAttributedString *)wz_mutableAttributedString {
     return [[NSMutableAttributedString alloc] initWithString:self];
 }
 
@@ -187,7 +187,7 @@ static const void *kWZAttributedStringAppendBlockKey = &kWZAttributedStringAppen
 // MARK: - NSAttributedString(WZAttributeChain)
 @implementation NSAttributedString (WZAttributeChain)
 
-- (WZAttributeRangeBlock)range {
+- (WZAttributeRangeBlock)wz_range {
     WZAttributeRangeBlock range = objc_getAssociatedObject(self, kWZAttributedStringRangeBlockKey);
     if (!range) {
         __weak typeof(self) weak_self = self;
@@ -200,19 +200,19 @@ static const void *kWZAttributedStringAppendBlockKey = &kWZAttributedStringAppen
     return range;
 }
 
-- (WZAttributesBlock)attributes {
+- (WZAttributesBlock)wz_attributes {
     WZAttributesBlock attributes = objc_getAssociatedObject(self, kWZAttributedStringAttributesBlockKey);
     if (!attributes) {
         __weak typeof(self) weak_self = self;
         attributes = ^NSAttributedString *(WZBuildAttributesBlock buildAttributes) {
-            return weak_self.range(0, weak_self.length).attributes(buildAttributes);
+            return weak_self.wz_range(0, weak_self.length).attributes(buildAttributes);
         };
         objc_setAssociatedObject(self, kWZAttributedStringAttributesBlockKey, attributes, OBJC_ASSOCIATION_COPY_NONATOMIC);
     }
     return attributes;
 }
 
-- (WZAttributedAppendBlock)append {
+- (WZAttributedAppendBlock)wz_append {
     WZAttributedAppendBlock append = objc_getAssociatedObject(self, kWZAttributedStringAppendBlockKey);
     if (!append) {
         __weak typeof(self) weak_self = self;
@@ -262,7 +262,7 @@ static const void *kWZAttributedStringAppendBlockKey = &kWZAttributedStringAppen
 // MARK: - NSMutableAttributedString(WZAttributeChain)
 @implementation NSMutableAttributedString (WZAttributeChain)
 
-- (WZMutableAttributeRangeBlock)range {
+- (WZMutableAttributeRangeBlock)wz_range {
     WZMutableAttributeRangeBlock range = objc_getAssociatedObject(self, kWZAttributedStringRangeBlockKey);
     if (!range) {
         __weak typeof(self) weak_self = self;
@@ -275,19 +275,19 @@ static const void *kWZAttributedStringAppendBlockKey = &kWZAttributedStringAppen
     return range;
 }
 
-- (WZMutableAttributesBlock)attributes {
+- (WZMutableAttributesBlock)wz_attributes {
     WZMutableAttributesBlock attributes = objc_getAssociatedObject(self, kWZAttributedStringAttributesBlockKey);
     if (!attributes) {
         __weak typeof(self) weak_self = self;
         attributes = ^NSMutableAttributedString *(WZBuildAttributesBlock buildAttributes) {
-            return weak_self.range(0, weak_self.length).attributes(buildAttributes);
+            return weak_self.wz_range(0, weak_self.length).attributes(buildAttributes);
         };
         objc_setAssociatedObject(self, kWZAttributedStringAttributesBlockKey, attributes, OBJC_ASSOCIATION_COPY_NONATOMIC);
     }
     return attributes;
 }
 
-- (WZMutableAttributedAppendBlock)append {
+- (WZMutableAttributedAppendBlock)wz_append {
     WZMutableAttributedAppendBlock append = objc_getAssociatedObject(self, kWZAttributedStringAppendBlockKey);
     if (!append) {
         __weak typeof(self) weak_self = self;

@@ -32,6 +32,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.currentRequestID = 0;
         NSDictionary *locationInfoCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"wz_location_info"];
         if (!locationInfoCache) {
             // 默认地址设置到 高新园地铁站
@@ -75,7 +76,8 @@
 }
 
 - (void)startRequestLocation {
-    self.currentRequestID = [[INTULocationManager sharedInstance] subscribeToLocationUpdatesWithDesiredAccuracy:INTULocationAccuracyNeighborhood block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+    if (self.currentRequestID != 0) return;
+    self.currentRequestID = [[INTULocationManager sharedInstance] requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock timeout:0 delayUntilAuthorized:YES block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
         if (status == INTULocationStatusSuccess) {
             [self updateToLocation:currentLocation];
             
@@ -87,6 +89,7 @@
 
 - (void)stopRequestLocation {
     [[INTULocationManager sharedInstance] cancelLocationRequest:self.currentRequestID];
+    self.currentRequestID = 0;
 }
 
 - (void)updateToLocation:(CLLocation *)location {
