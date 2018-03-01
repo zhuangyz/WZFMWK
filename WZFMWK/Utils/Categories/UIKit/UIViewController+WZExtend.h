@@ -11,11 +11,18 @@
 // MARK: - 系统弹框
 @interface UIViewController (WZAlert)
 
-- (void)wz_showAlertWithTitle:(NSString *)title
-                       message:(NSString *)message
-                   cancelTitle:(NSString *)cancelTitle
-                   otherTitles:(NSArray<NSString *> *)otherTitles
-                   cancelBlock:(void(^)(void))cancelBlock
-                  actionsBlock:(void(^)(NSInteger tapIndex))actionsBlock;
+- (UIAlertController *)wz_showAlertWithTitle:(NSString *)title
+                                     message:(NSString *)message
+                                 cancelTitle:(NSString *)cancelTitle
+                                 otherTitles:(NSArray<NSString *> *)otherTitles
+                                 cancelBlock:(void(^)(void))cancelBlock
+                                actionsBlock:(void(^)(NSInteger tapIndex))actionsBlock;
+
+- (UIAlertController *)wz_showActionSheetWithTitle:(NSString *)title
+                                           message:(NSString *)message
+                                       cancelTitle:(NSString *)cancelTitle
+                                       otherTitles:(NSArray<NSString *> *)otherTitles
+                                       cancelBlock:(void (^)(void))cancelBlock
+                                      actionsBlock:(void (^)(NSInteger))actionsBlock;
 
 @end

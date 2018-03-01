@@ -12,6 +12,8 @@
 
 @interface WZLocationManager()
 
+@property (nonatomic, assign, readwrite) WZLocationStatus locationStatus;
+
 @property (nonatomic, assign, readwrite) float lat; // 纬度
 @property (nonatomic, assign, readwrite) float lng; // 经度
 
@@ -33,28 +35,28 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.currentRequestID = 0;
-        NSDictionary *locationInfoCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"wz_location_info"];
-        if (!locationInfoCache) {
-            // 默认地址设置到 高新园地铁站
-            self.lat = 22.540121;
-            self.lng = 113.955284;
-            self.country = @"中国";
-            self.state = @"广东省";
-            self.city = @"深圳市";
-            self.county = @"南山区";
-            self.thoroughfare = @"深南大道";
+        self.locationStatus = WZLocationStatusServicesNotDetermined;
+//        NSDictionary *locationInfoCache = [[NSUserDefaults standardUserDefaults] objectForKey:@"wz_location_info"];
+//        if (!locationInfoCache) {
+            self.lat = 0;
+            self.lng = 0;
+            self.country = nil;
+            self.state = nil;
+            self.city = nil;
+            self.county = nil;
+            self.thoroughfare = nil;
             self.subThoroughfare = nil;
             
-        } else {
-            self.lat = [locationInfoCache[@"lat"] doubleValue];
-            self.lng = [locationInfoCache[@"lng"] doubleValue];
-            self.country = locationInfoCache[@"country"];
-            self.state = locationInfoCache[@"state"];
-            self.city = locationInfoCache[@"city"];
-            self.county = locationInfoCache[@"county"];
-            self.thoroughfare = locationInfoCache[@"thoroughfare"];
-            self.subThoroughfare = locationInfoCache[@"subThoroughfare"];
-        }
+//        } else {
+//            self.lat = [locationInfoCache[@"lat"] doubleValue];
+//            self.lng = [locationInfoCache[@"lng"] doubleValue];
+//            self.country = locationInfoCache[@"country"];
+//            self.state = locationInfoCache[@"state"];
+//            self.city = locationInfoCache[@"city"];
+//            self.county = locationInfoCache[@"county"];
+//            self.thoroughfare = locationInfoCache[@"thoroughfare"];
+//            self.subThoroughfare = locationInfoCache[@"subThoroughfare"];
+//        }
     }
     return self;
 }
@@ -78,12 +80,35 @@
 - (void)startRequestLocation {
     if (self.currentRequestID != 0) return;
     self.currentRequestID = [[INTULocationManager sharedInstance] requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock timeout:0 delayUntilAuthorized:YES block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
-        if (status == INTULocationStatusSuccess) {
-            [self updateToLocation:currentLocation];
-            
-        } else {
-            NSLog(@"无法获取定位信息");
+        switch (status) {
+            case INTULocationStatusSuccess:
+                [self updateToLocation:currentLocation];
+                self.locationStatus = WZLocationStatusSuccess;
+                break;
+            case INTULocationStatusTimedOut:
+                self.locationStatus = WZLocationStatusTimedOut;
+                break;
+            case INTULocationStatusServicesNotDetermined:
+                self.locationStatus = WZLocationStatusServicesNotDetermined;
+                break;
+            case INTULocationStatusServicesDenied:
+                self.locationStatus = WZLocationStatusServicesDenied;
+                break;
+            case INTULocationStatusServicesRestricted:
+                self.locationStatus = WZLocationStatusServicesRestricted;
+                break;
+            case INTULocationStatusServicesDisabled:
+                self.locationStatus = WZLocationStatusServicesDisabled;
+                break;
+            case INTULocationStatusError:
+                self.locationStatus = WZLocationStatusError;
+                break;
         }
+#if DEBUG
+        if (self.locationStatus != WZLocationStatusSuccess) {
+            NSLog(@"无法获取位置信息，location status：%lu", self.locationStatus);
+        }
+#endif
     }];
 }
 
@@ -107,17 +132,17 @@
             self.thoroughfare = placemark.thoroughfare;
             self.subThoroughfare = placemark.subThoroughfare;
             
-            NSMutableDictionary *locationInfo = [NSMutableDictionary dictionary];
-            locationInfo[@"lat"] = [NSString stringWithFormat:@"%.6f", self.lat];
-            locationInfo[@"lng"] = [NSString stringWithFormat:@"%.6f", self.lng];
-            [locationInfo setValue:self.country forKey:@"country"];
-            [locationInfo setValue:self.state forKey:@"state"];
-            [locationInfo setValue:self.city forKey:@"city"];
-            [locationInfo setValue:self.county forKey:@"county"];
-            [locationInfo setValue:self.thoroughfare forKey:@"thoroughfare"];
-            [locationInfo setValue:self.subThoroughfare forKey:@"subThoroughfare"];
-            [[NSUserDefaults standardUserDefaults] setObject:locationInfo forKey:@"wz_location_info"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
+//            NSMutableDictionary *locationInfo = [NSMutableDictionary dictionary];
+//            locationInfo[@"lat"] = [NSString stringWithFormat:@"%f", self.lat];
+//            locationInfo[@"lng"] = [NSString stringWithFormat:@"%f", self.lng];
+//            [locationInfo setValue:self.country forKey:@"country"];
+//            [locationInfo setValue:self.state forKey:@"state"];
+//            [locationInfo setValue:self.city forKey:@"city"];
+//            [locationInfo setValue:self.county forKey:@"county"];
+//            [locationInfo setValue:self.thoroughfare forKey:@"thoroughfare"];
+//            [locationInfo setValue:self.subThoroughfare forKey:@"subThoroughfare"];
+//            [[NSUserDefaults standardUserDefaults] setObject:locationInfo forKey:@"wz_location_info"];
+//            [[NSUserDefaults standardUserDefaults] synchronize];
             
             [(id)self locationManagerDidUpdateLocationInfo:self];
 #if DEBUG
