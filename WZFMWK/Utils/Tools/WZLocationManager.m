@@ -84,6 +84,7 @@
             case INTULocationStatusSuccess:
                 [self updateToLocation:currentLocation];
                 self.locationStatus = WZLocationStatusSuccess;
+                [self subscribeLocationWhenRequestSuccess]; // 首次获取到位置之后，就开始订阅位置变化，获取失败的则不订阅
                 break;
             case INTULocationStatusTimedOut:
                 self.locationStatus = WZLocationStatusTimedOut;
@@ -109,6 +110,14 @@
             NSLog(@"无法获取位置信息，location status：%lu", self.locationStatus);
         }
 #endif
+    }];
+}
+
+- (void)subscribeLocationWhenRequestSuccess {
+    self.currentRequestID = [[INTULocationManager sharedInstance] subscribeToLocationUpdatesWithDesiredAccuracy:INTULocationAccuracyRoom block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+        if (status == INTUHeadingStatusSuccess) {
+            [self updateToLocation:currentLocation];
+        }
     }];
 }
 

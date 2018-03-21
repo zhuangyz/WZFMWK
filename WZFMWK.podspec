@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'WZFMWK'
   s.summary      = '一些自用的、通用的、业务逻辑无关的类别/工具类。'
-  s.version      = '0.1.5'
+  s.version      = '0.1.7'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'zhuangyz' => '632647076@qq.com' }
   s.homepage     = 'https://github.com/zhuangyz'
@@ -48,8 +48,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.dependency 'WZFMWK/Utils'
-    core.dependency 'WZFMWK/WZHTTPNetworking'
-    core.dependency 'WZFMWK/WZPhotoBrowser'
   end
   s.default_subspec = 'Core'
 
